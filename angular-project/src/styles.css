@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-button{
-    background-color: red;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
+body {
+    font-family: Arial, sans-serif;
+}
+h1{
+    text-align: center;
+    color: green;
 }
