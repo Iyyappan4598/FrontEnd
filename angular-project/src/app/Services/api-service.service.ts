@@ -11,5 +11,7 @@ export class ApiServiceService {
   submitDoctor(data:any){
     return this.http.post("http://localhost:3000/doctor/user", data)
   }
-
+  doctorDetails(){
+    return this.http.get("http://localhost:3000/get/doctor/data")
+  }
 }

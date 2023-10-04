@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="container">
     <h1>Doctor Data</h1>
     <form [formGroup]="doctorForm">
@@ -21,7 +22,6 @@
             <option value="Chennai">Chennai</option>
             <option value="Villupuram">Villupuram</option>
         </select><br> -->
-
         <input type="submit" value="Submit" (click)="submit()">
     </form>
 </div>
@@ -29,45 +29,21 @@
 <h1>Table</h1>
 <table border="1" cellpadding="20px" style="margin: auto">
     <tr>
+        <th>Sl.No</th>
         <th>Name</th>
         <th>Mobile</th>
         <th>Department</th>
-        <th>Sallery</th>
+        <th>Salary</th>
         <th>Location</th>
+        <th>Action</th>
     </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
+    <tr *ngFor ="let items of this.data; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{items.Name}}</td>
+        <td>{{items.mobile}}</td>
+        <td>{{items.department}}</td>
+        <td>{{items.sallery}}</td>
+        <td>{{items.location}}</td>
+        <td><i class="fa fa-edit"></i> <i class="fa fa-trash"></i></td>
+    </tr>    
 </table>
