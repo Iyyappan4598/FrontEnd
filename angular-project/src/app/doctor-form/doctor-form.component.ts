@@ -33,4 +33,14 @@ export class DoctorFormComponent {
       this.data = res;
     })
   }
+  deleteDoctorData(id:any){
+    this.api.deleteDoctor(id).subscribe((res:any)=>{
+      
+    })
+  }
+  editDoctorData(id:any, data:any){
+    this.api.EditDoctor(id, data).subscribe((res:any)=>{
+      // console.log(this.doctorForm.value)
+    })
+  }
 }

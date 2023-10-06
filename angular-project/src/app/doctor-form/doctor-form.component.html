@@ -44,6 +44,6 @@
         <td>{{items.department}}</td>
         <td>{{items.sallery}}</td>
         <td>{{items.location}}</td>
-        <td><i class="fa fa-edit"></i> <i class="fa fa-trash"></i></td>
+        <td><i class="fa fa-edit" (click)="editDoctorData(items._id, items)"></i> <i class="fa fa-trash" (click)="deleteDoctorData(items._id)"></i></td>
     </tr>    
 </table>
