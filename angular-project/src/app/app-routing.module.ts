@@ -6,6 +6,8 @@ import { DoctorFormComponent } from './doctor-form/doctor-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 //Import Login
 import { LoginComponent } from './login/login.component';
+//Import Update Doctor Form
+import { EditdoctordataComponent } from './edit-doctor-data/edit-doctor-data.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,9 @@ const routes: Routes = [
   },
   {
     path:"LoginComponent", component: LoginComponent
+  },
+  {
+    path:"EditDoctor",component: EditdoctordataComponent
   }
 ];
 

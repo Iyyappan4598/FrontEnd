@@ -23,8 +23,8 @@ export class ApiServiceService {
     return this.http.delete("http://localhost:3000/delete/Doctor/data/"+id)
   }
 
-  //Edit Backend(MongoDB) data
-  EditDoctor(id:any ,data:any){
-    return this.http.put("http://localhost:3000/put/edit/Doctor/"+id, data)
+  //Edit Specific Doctor Data
+  SpecificDoctor(id:any){
+    return this.http.get("http://localhost:3000/get/specific/doctor/data"+id)
   }
 }

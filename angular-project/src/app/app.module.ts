@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { DoctorFormComponent } from './doctor-form/doctor-form.component';
+import { EditdoctordataComponent } from './edit-doctor-data/edit-doctor-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterFormComponent,
-    DoctorFormComponent
+    DoctorFormComponent,
+    EditdoctordataComponent
   ],
   imports: [
     BrowserModule,
