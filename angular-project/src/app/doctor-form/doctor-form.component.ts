@@ -11,6 +11,7 @@ export class DoctorFormComponent {
   constructor(public api: ApiServiceService) { }
 
   doctorForm: any;
+
   ngOnInit() {
 
     this.doctorForm = new FormGroup({
@@ -20,12 +21,14 @@ export class DoctorFormComponent {
       sallery: new FormControl(),
       location: new FormControl()
     })
+
     this.getDoctorDetails();
   }
+
   submit() {
-    // console.log("works")
-    // console.log(this.doctorForm.value)
-    this.api.submitDoctor(this.doctorForm.value).subscribe((res:any)=>{})
+    this.api.submitDoctor(this.doctorForm.value).subscribe((res:any)=>{
+      this.getDoctorDetails();
+    })
   }
 
   data:any
@@ -38,11 +41,5 @@ export class DoctorFormComponent {
   deleteDoctorData(id:any){
     this.api.deleteDoctor(id).subscribe((res:any)=>{      
     })
-  }
-
-  // editDoctorData(id:any){
-  //   this.api.SpecificDoctor(id).subscribe((res:any)=>{
-  //     // console.log(this.doctorForm.value)
-  //   })
-  // }
+  }  
 }

@@ -45,7 +45,10 @@
         <td>{{items.sallery}}</td>
         <td>{{items.location}}</td>
         <td>
-            <i class="fa fa-edit" routerLink="../edit-doctor-data" [queryParams]="{doctorId: items._id}"></i> 
+            <i class="fa fa-edit" 
+            routerLink="../EditDoctor" 
+            [queryParams]="{doctorId: items._id}">
+        </i> 
             <i class="fa fa-trash" (click)="deleteDoctorData(items._id)"></i></td>
     </tr>    
 </table>

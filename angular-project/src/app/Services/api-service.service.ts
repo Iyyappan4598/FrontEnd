@@ -18,13 +18,18 @@ export class ApiServiceService {
     return this.http.get("http://localhost:3000/get/doctor/data")
   }
 
+  //get specific Data
+  SpecificDoctor(id: any) {
+    return this.http.get("http://localhost:3000/get/specific/doctor/data/"+id)
+  }
+
   //Delete Backend(MongoDB) data
   deleteDoctor(id:any){
     return this.http.delete("http://localhost:3000/delete/Doctor/data/"+id)
-  }
-
-  //Edit Specific Doctor Data
-  SpecificDoctor(id:any){
-    return this.http.get("http://localhost:3000/get/specific/doctor/data"+id)
+  }  
+  
+  //Edit Specific Doctor data
+  EditDoctor(id:any ,data:any){
+    return this.http.put("http://localhost:3000/put/edit/Doctor/"+id, data)
   }
 }
