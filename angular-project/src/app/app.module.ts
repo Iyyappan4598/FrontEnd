@@ -11,6 +11,7 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import { DoctorFormComponent } from './doctor-form/doctor-form.component';
 import { EditdoctordataComponent } from './edit-doctor-data/edit-doctor-data.component';
 import { NurseFormComponent } from './nurse-form/nurse-form.component';
+import { PatientFormComponent } from './patient-form/patient-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NurseFormComponent } from './nurse-form/nurse-form.component';
     RegisterFormComponent,
     DoctorFormComponent,
     EditdoctordataComponent,
-    NurseFormComponent
+    NurseFormComponent,
+    PatientFormComponent
   ],
   imports: [
     BrowserModule,

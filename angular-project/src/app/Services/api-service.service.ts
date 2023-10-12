@@ -13,7 +13,7 @@ export class ApiServiceService {
     return this.http.post("http://localhost:3000/doctor/user", data)
   }
 
-  //get data from Backend(MongoDB) to Frontend
+  //get Doctor data from Backend(MongoDB) to Frontend
   doctorDetails() {
     return this.http.get("http://localhost:3000/get/doctor/data")
   }
@@ -23,7 +23,7 @@ export class ApiServiceService {
     return this.http.get("http://localhost:3000/get/specific/doctor/data/" + id)
   }
 
-  //Delete Backend(MongoDB) data
+  //Delete Doctor Backend(MongoDB) data
   deleteDoctor(id: any) {
     return this.http.delete("http://localhost:3000/delete/Doctor/data/" + id)
   }
@@ -36,5 +36,15 @@ export class ApiServiceService {
   //Post Nurse data store from Frontend to Backend(MongoDB)
   submitNurse(data: any) {
     return this.http.post("http://localhost:3000/nurse/user", data)
+  }
+
+  //get Nurse data from Backend(MongoDB) to Frontend
+  nurseDetails() {
+    return this.http.get("http://localhost:3000/get/Nurse/data")
+  }
+
+  //Delete Nurse Backend(MongoDB) data
+  deleteNurse(id: any) {
+    return this.http.delete("http://localhost:3000/delete/Nurse/data/" + id)
   }
 }

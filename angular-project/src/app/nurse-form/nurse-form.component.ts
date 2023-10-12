@@ -13,21 +13,36 @@ export class NurseFormComponent {
 
   nurseForm: any;
 
+  //Nurse Field (Schema) Name 
   ngOnInit() {
     this.nurseForm = new FormGroup({
       EmpId: new FormControl(),
       Name: new FormControl(),
-      Mobile: new FormControl(),
+      mobile: new FormControl(),
       Jobrole: new FormControl(),
       sallery: new FormControl(),
       location: new FormControl()
-
     })
+    this.getnursedetails();
   }
-  value: any
+
   submit() {
     this.api.submitNurse(this.nurseForm.value).subscribe((res: any) => {
+      this.getnursedetails();
+    })
+  }
+
+  //Get Nurse Full Data
+  value: any
+  getnursedetails() {
+    this.api.nurseDetails().subscribe((res: any) => {
       this.value = res;
+    })
+  }
+
+  //Delete Nurse Specific Data using id
+  deleteNurseData(id: any) {
+    this.api.deleteNurse(id).subscribe((res: any) => {
     })
   }
 }

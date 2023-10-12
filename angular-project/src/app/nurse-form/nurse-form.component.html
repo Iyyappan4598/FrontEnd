@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="container">
     <h1>Nurse Bio Data</h1>
-    <form formGroup="nurseForm">
+    <form [formGroup]="nurseForm">
         <label>EmpId:</label>
         <input type="text" placeholder="Enter Your EmpId" formControlName="EmpId">
 
         <label>Name:</label>
-        <input type="text" placeholder="+91 " formControlName="Name">
+        <input type="text" placeholder="Enter Your Name" formControlName="Name">
 
         <label>Mobile:</label>
         <input type="number" placeholder="+91 " formControlName="mobile">
@@ -33,6 +33,7 @@
         <th>Jobrole</th>
         <th>Salary</th>
         <th>Location</th>
+        <th>Action</th>
     </tr>
     <tr *ngFor="let values of this.value; let i = index">
         <td>{{i+1}}</td>
@@ -42,4 +43,8 @@
         <td>{{values.Jobrole}}</td>
         <td>{{values.sallery}}</td>
         <td>{{values.location}}</td>
+        <td>
+            <i class="fa fa-edit"></i>
+            <i class="fa fa-trash" (click)="deleteNurseData(values._id)"></i>
+        </td>
     </tr>

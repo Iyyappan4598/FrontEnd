@@ -12,8 +12,8 @@ export class DoctorFormComponent {
 
   doctorForm: any;
 
+  //Doctor Field (Schema) Name 
   ngOnInit() {
-
     this.doctorForm = new FormGroup({
       Name: new FormControl(),
       mobile: new FormControl(),
@@ -21,7 +21,6 @@ export class DoctorFormComponent {
       sallery: new FormControl(),
       location: new FormControl()
     })
-
     this.getDoctorDetails();
   }
 
@@ -30,14 +29,14 @@ export class DoctorFormComponent {
       this.getDoctorDetails();
     })
   }
-
+  //Get Docotor Full Data
   data: any
   getDoctorDetails() {
     this.api.doctorDetails().subscribe((res: any) => {
       this.data = res;
     })
   }
-
+  //Delete Doctor Specific Data using id
   deleteDoctorData(id: any) {
     this.api.deleteDoctor(id).subscribe((res: any) => {
     })
