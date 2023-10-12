@@ -8,8 +8,11 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import { LoginComponent } from './login/login.component';
 //Import Update Doctor Form
 import { EditdoctordataComponent } from './edit-doctor-data/edit-doctor-data.component';
+//Import Nurse Form
+import { NurseFormComponent } from './nurse-form/nurse-form.component';
 
 const routes: Routes = [
+  //Doctor Post Delete Get Put Method
   {
     path: "DoctorFormComponent", component: DoctorFormComponent
   },
@@ -17,10 +20,15 @@ const routes: Routes = [
     path: "RegisterFormComponent", component: RegisterFormComponent
   },
   {
-    path:"LoginComponent", component: LoginComponent
+    path: "LoginComponent", component: LoginComponent
   },
   {
-    path:"EditDoctor",component: EditdoctordataComponent
+    path: "EditDoctor", component: EditdoctordataComponent
+  },
+
+  //Nurse Post Delete Get Put Method
+  {
+    path: "NurseForm", component: NurseFormComponent
   }
 ];
 

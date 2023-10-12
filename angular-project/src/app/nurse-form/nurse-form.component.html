@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container">
+    <h1>Nurse Bio Data</h1>
+    <form formGroup="nurseForm">
+        <label>EmpId:</label>
+        <input type="text" placeholder="Enter Your EmpId" formControlName="EmpId">
+
+        <label>Name:</label>
+        <input type="text" placeholder="+91 " formControlName="Name">
+
+        <label>Mobile:</label>
+        <input type="number" placeholder="+91 " formControlName="mobile">
+
+        <label>Jobrole:</label>
+        <input type="text" placeholder="Jobrole" formControlName="Jobrole">
+
+        <label>Sallery:</label>
+        <input type="number" placeholder="" formControlName="sallery">
+
+        <label>Location</label>
+        <input type="text" placeholder="Location" formControlName="location">
+        <input type="submit" value="Submit" (click)="submit()">
+    </form>
+</div>
+
+<h1>Nurse Bio Data Table</h1>
+<table border="1" cellpadding="20px" style="margin: auto">
+    <tr>
+        <th>Sl.No</th>
+        <th>EmpId</th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Jobrole</th>
+        <th>Salary</th>
+        <th>Location</th>
+    </tr>
+    <tr *ngFor="let values of this.value; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{values.EmpId}}</td>
+        <td>{{values.Name}}</td>
+        <td>{{values.mobile}}</td>
+        <td>{{values.Jobrole}}</td>
+        <td>{{values.sallery}}</td>
+        <td>{{values.location}}</td>
+    </tr>

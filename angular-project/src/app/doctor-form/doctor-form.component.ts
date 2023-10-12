@@ -26,20 +26,20 @@ export class DoctorFormComponent {
   }
 
   submit() {
-    this.api.submitDoctor(this.doctorForm.value).subscribe((res:any)=>{
+    this.api.submitDoctor(this.doctorForm.value).subscribe((res: any) => {
       this.getDoctorDetails();
     })
   }
 
-  data:any
-  getDoctorDetails(){
-    this.api.doctorDetails().subscribe((res:any)=>{
+  data: any
+  getDoctorDetails() {
+    this.api.doctorDetails().subscribe((res: any) => {
       this.data = res;
     })
   }
 
-  deleteDoctorData(id:any){
-    this.api.deleteDoctor(id).subscribe((res:any)=>{      
+  deleteDoctorData(id: any) {
+    this.api.deleteDoctor(id).subscribe((res: any) => {
     })
-  }  
+  }
 }

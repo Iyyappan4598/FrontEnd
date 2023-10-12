@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { DoctorFormComponent } from './doctor-form/doctor-form.component';
 import { EditdoctordataComponent } from './edit-doctor-data/edit-doctor-data.component';
+import { NurseFormComponent } from './nurse-form/nurse-form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EditdoctordataComponent } from './edit-doctor-data/edit-doctor-data.com
     LoginComponent,
     RegisterFormComponent,
     DoctorFormComponent,
-    EditdoctordataComponent
+    EditdoctordataComponent,
+    NurseFormComponent
   ],
   imports: [
     BrowserModule,
