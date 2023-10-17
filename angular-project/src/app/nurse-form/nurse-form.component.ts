@@ -13,7 +13,7 @@ export class NurseFormComponent {
 
   nurseForm: any;
 
-  //Nurse Field (Schema) Name 
+  //Nurse Field (Schema) Name
   ngOnInit() {
     this.nurseForm = new FormGroup({
       EmpId: new FormControl(),

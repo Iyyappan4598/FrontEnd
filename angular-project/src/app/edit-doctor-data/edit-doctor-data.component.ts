@@ -13,6 +13,7 @@ export class EditdoctordataComponent implements OnInit{
   updateForm:any
   doctor:any
 
+  //Doctor Field (Schema) Name
   ngOnInit(){
     this.updateForm = new FormGroup({
       Name: new FormControl(),

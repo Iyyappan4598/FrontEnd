@@ -18,7 +18,7 @@ export class ApiServiceService {
     return this.http.get("http://localhost:3000/get/doctor/data")
   }
 
-  //get specific Data
+  //get specific Doctor Data
   SpecificDoctor(id: any) {
     return this.http.get("http://localhost:3000/get/specific/doctor/data/" + id)
   }
@@ -46,5 +46,15 @@ export class ApiServiceService {
   //Delete Nurse Backend(MongoDB) data
   deleteNurse(id: any) {
     return this.http.delete("http://localhost:3000/delete/Nurse/data/" + id)
+  }
+
+  //get specific Nurse Data
+  SpecificNurse(id: any) {
+    return this.http.get("http://localhost:3000/get/specific/Nurse/data/" + id)
+  }
+
+  //Edit Specific Nurse data
+  EditNurse(id: any, data: any) {
+    return this.http.put("http://localhost:3000/put/edit/Nurse/" + id, data)
   }
 }

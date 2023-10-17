@@ -44,7 +44,7 @@
         <td>{{values.sallery}}</td>
         <td>{{values.location}}</td>
         <td>
-            <i class="fa fa-edit"></i>
+            <i class="fa fa-edit" routerLink="../UpdateNurse" [queryParams]="{NurseId: values._id}"></i>
             <i class="fa fa-trash" (click)="deleteNurseData(values._id)"></i>
         </td>
     </tr>
