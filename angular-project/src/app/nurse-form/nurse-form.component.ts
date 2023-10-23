@@ -19,8 +19,7 @@ export class NurseFormComponent {
       EmpId: new FormControl(),
       Name: new FormControl(),
       mobile: new FormControl(),
-      Jobrole: new FormControl(),
-      sallery: new FormControl(),
+      salary: new FormControl(),
       location: new FormControl()
     })
     this.getnursedetails();

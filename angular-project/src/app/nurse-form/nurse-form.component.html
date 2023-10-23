@@ -11,11 +11,8 @@
         <label>Mobile:</label>
         <input type="number" placeholder="+91 " formControlName="mobile">
 
-        <label>Jobrole:</label>
-        <input type="text" placeholder="Jobrole" formControlName="Jobrole">
-
-        <label>Sallery:</label>
-        <input type="number" placeholder="" formControlName="sallery">
+        <label>Salary:</label>
+        <input type="number" placeholder="" formControlName="salary">
 
         <label>Location</label>
         <input type="text" placeholder="Location" formControlName="location">
@@ -30,7 +27,6 @@
         <th>EmpId</th>
         <th>Name</th>
         <th>Mobile</th>
-        <th>Jobrole</th>
         <th>Salary</th>
         <th>Location</th>
         <th>Action</th>
@@ -40,8 +36,7 @@
         <td>{{values.EmpId}}</td>
         <td>{{values.Name}}</td>
         <td>{{values.mobile}}</td>
-        <td>{{values.Jobrole}}</td>
-        <td>{{values.sallery}}</td>
+        <td>{{values.salary}}</td>
         <td>{{values.location}}</td>
         <td>
             <i class="fa fa-edit" routerLink="../UpdateNurse" [queryParams]="{NurseId: values._id}"></i>

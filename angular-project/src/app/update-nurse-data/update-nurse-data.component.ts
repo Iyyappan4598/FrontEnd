@@ -19,8 +19,7 @@ ngOnInit() {
     EmpId: new FormControl(),
     Name: new FormControl(),
     mobile: new FormControl(),
-    Jobrole: new FormControl(),
-    sallery: new FormControl(),
+    salary: new FormControl(),
     location: new FormControl()
   })
 
@@ -39,8 +38,7 @@ nurseDataSpecific:any
           EmpId:this.nurseDataSpecific.EmpId,
           Name: this.nurseDataSpecific.Name,
           mobile: this.nurseDataSpecific.mobile,
-          Jobrole: this.nurseDataSpecific.Jobrole,
-          sallery: this.nurseDataSpecific.sallery,
+          salary: this.nurseDataSpecific.salary,
           location:this.nurseDataSpecific.location
 
         })
