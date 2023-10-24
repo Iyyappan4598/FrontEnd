@@ -13,6 +13,7 @@ import { EditdoctordataComponent } from './edit-doctor-data/edit-doctor-data.com
 import { NurseFormComponent } from './nurse-form/nurse-form.component';
 import { PatientFormComponent } from './patient-form/patient-form.component';
 import { UpdateNurseDataComponent } from './update-nurse-data/update-nurse-data.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UpdateNurseDataComponent } from './update-nurse-data/update-nurse-data.
     EditdoctordataComponent,
     NurseFormComponent,
     PatientFormComponent,
-    UpdateNurseDataComponent
+    UpdateNurseDataComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

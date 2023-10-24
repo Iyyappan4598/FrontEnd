@@ -6,6 +6,8 @@ import { DoctorFormComponent } from './doctor-form/doctor-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 //Import Login
 import { LoginComponent } from './login/login.component';
+//Import Signup
+import { SignupComponent } from './signup/signup.component';
 //Import Update Doctor Form
 import { EditdoctordataComponent } from './edit-doctor-data/edit-doctor-data.component';
 //Import Nurse Form
@@ -25,6 +27,10 @@ const routes: Routes = [
   //Create Login Form
   {
     path: "LoginComponent", component: LoginComponent
+  },
+  //Create Signup Form
+  {
+    path: "Signup", component: SignupComponent
   },
 
   //Update Doctor Form

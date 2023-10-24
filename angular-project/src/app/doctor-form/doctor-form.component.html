@@ -26,6 +26,7 @@
     </form>
 </div>
 
+
 <h1>Table</h1>
 <table border="1" cellpadding="20px" style="margin: auto">
     <tr>
@@ -42,7 +43,9 @@
         <td>{{items.Name}}</td>
         <td>{{items.mobile}}</td>
         <td>{{items.department}}</td>
-        <td>{{items.sallery}}</td>
+        <!--  USD is United States Dollars, US Dollars with symbol -->
+        <!-- <td>{{items.sallery | currency:'USD':'symbol'}}</td> -->
+        <td>{{items.sallery | currency:'INR':'symbol'}}</td>
         <td>{{items.location}}</td>
         <td>
             <i class="fa fa-edit" 
