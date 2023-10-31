@@ -57,4 +57,12 @@ export class ApiServiceService {
   EditNurse(id: any, data: any) {
     return this.http.put("http://localhost:3000/put/edit/Nurse/" + id, data)
   }
+
+  //Post UserLogin data store from Frontend to Backend(MongoDB)
+  AdminLogin(data: any) {
+    return this.http.post("http://localhost:3000/User/Admin", data)
+  }
+  AdminCheckLogin(data: any) {
+    return this.http.post("http://localhost:3000/Admin/login", data)
+  }
 }

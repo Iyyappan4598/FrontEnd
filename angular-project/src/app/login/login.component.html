@@ -1,11 +1,11 @@
 <h1> Admin Login Form </h1>  
-<form>  
+<form [formGroup]="loginForm">  
     <div class="container">   
-        <label>Username : </label>   
-        <input type="text" placeholder="Enter Username" name="username" required>  
-        <label>Password : </label>   
-        <input type="password" placeholder="Enter Password" name="password" required>  
-        <button type="submit">Sign In</button>
+        <label>Email: </label>   
+        <input type="email" placeholder="Enter Username" formControlName="Email">  
+        <label>Password: </label>   
+        <input type="password" placeholder="Enter Password" formControlName="password">  
+        <button type="submit" values="Submit" (click)="submit()">Sign In</button>
         <button routerLink="../Signup"  type="submit" id="signup" >Sign Up</button>
     </div>
 </form> 

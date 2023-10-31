@@ -14,6 +14,11 @@ import { NurseFormComponent } from './nurse-form/nurse-form.component';
 import { PatientFormComponent } from './patient-form/patient-form.component';
 import { UpdateNurseDataComponent } from './update-nurse-data/update-nurse-data.component';
 import { SignupComponent } from './signup/signup.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -25,14 +30,16 @@ import { SignupComponent } from './signup/signup.component';
     NurseFormComponent,
     PatientFormComponent,
     UpdateNurseDataComponent,
-    SignupComponent
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,16 +1,14 @@
 <h1> Admin Signup Form </h1>  
-<form>  
+<form [formGroup]="adminForm">  
     <div class="container">   
-        <label>First Name : </label>
-        <input type="text" placeholder="Enter your first name" name="username" required>
-        <label>Last Name : </label>
-        <input type="text" placeholder="Enter your last name" name="username" required> 
-        <label>Age : </label>
-        <input type="number" placeholder="Enter your age" name="age" required> 
-        <label>Password : </label>   
-        <input type="password" placeholder="xxxxxxx" name="password" required>
-        <label>Confirm Password : </label>   
-        <input type="password" placeholder="xxxxxxx" name="password" required>          
-        <button type="submit" id="signup">Register</button>
+        <label>Name: </label>
+        <input type="text" placeholder="Enter your first name" formControlName="Name">
+        <label>Age: </label>
+        <input type="number" placeholder="Enter your age" formControlName="Age"> 
+        <label>Email: </label>
+        <input type="email" placeholder="Enter your email" formControlName="Email"> 
+        <label>Password: </label>   
+        <input type="password" placeholder="xxxxxxx" formControlName="password">        
+        <button type="submit" id="signup" values="Submit" (click)="submit()">Register</button>
     </div>   
 </form> 
