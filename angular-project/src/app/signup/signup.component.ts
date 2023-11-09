@@ -32,6 +32,7 @@ export class SignupComponent {
     this.snackBar.open(message, 'Close', {
       duration: 3000, // Duration for which the message is displayed (in milliseconds)
       panelClass: ['success-snackbar'], // CSS class for styling
+      verticalPosition:'top',
     });
   }
   
