@@ -8,8 +8,10 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  router: any;
   constructor(public api: ApiServiceService) { }
-  loginForm:any;
+  loginForm: any;
+  token: any;
 
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -17,9 +19,18 @@ export class LoginComponent {
       password: new FormControl(''),
     })
   }
+  getToken: any;
   submit() {
-    this.api.AdminCheckLogin(this.loginForm.values).subscribe((res: any) => {
-      console.log(res,"Login Successfully")
+    this.api.AdminCheckLogin(this.loginForm.value).subscribe((res: any) => {
+      // console.log(res,"Login Successfully")
+      this.token = res.message;
+      sessionStorage.setItem('token', this.token)
+      this.getToken = sessionStorage.getItem('token');
+      if (this.getToken == "undefined") {
+        console.log("Incorrect")
+      } else {
+        this.router.navigate(['../DoctorFormComponent'])
+      }
 
     })
   }

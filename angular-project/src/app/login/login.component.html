@@ -1,11 +1,13 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <h1> Admin Login Form </h1>  
 <form [formGroup]="loginForm">  
     <div class="container">   
         <label>Email: </label>   
-        <input type="email" placeholder="Enter Username" formControlName="Email">  
+        <input type="email" placeholder="Enter your e-mail" formControlName="Email">  
         <label>Password: </label>   
-        <input type="password" placeholder="Enter Password" formControlName="password">  
-        <button type="submit" values="Submit" (click)="submit()">Sign In</button>
+        <input type="password" placeholder="Enter Password" formControlName="password"> 
+        <i class="fa fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i> 
+        <button type="submit" (click)="submit()">Sign In</button>
         <button routerLink="../Signup"  type="submit" id="signup" >Sign Up</button>
     </div>
 </form> 
